@@ -67,4 +67,8 @@ public class OrderController {
      * }
      */
     //
+    public ResponseEntity<Order> createOrder(@RequestBody Request requsest) {
+        Order order = orderService.placeOrder(Request);
+        return ResponseEntity.ok(order);
+    }
 }
